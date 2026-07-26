@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root{
+
+    --primary:#58C472;
+    --primary-dark:#43AE5D;
+
+    --secondary:#6EC6FF;
+
+    --background:#EEF8FF;
+
+    --white:#FFFFFF;
+
+    --text:#263238;
+
+    --subtitle:#7B8794;
+
+    --danger:#FF6B6B;
+
+    --warning:#FFD166;
+
+    --radius:24px;
+
+    --radius-small:18px;
+
+    --shadow:
+        0 10px 30px rgba(0,0,0,.08);
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:linear-gradient(
+        180deg,
+        #EEF8FF 0%,
+        #F9FCFF 100%
+    );
+
+    font-family:'Poppins',sans-serif;
+
+    color:var(--text);
+
+}
+
+.mobile-app{
+
+    max-width:430px;
+
+    margin:auto;
+
+    min-height:100vh;
+
+    padding:24px;
+
+    position:relative;
+
+}
+
+
+/* ==========================================================
+HEADER
+========================================================== */
+
+.header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:34px;
+
+}
+
+.header-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.logo{
+
+    width:58px;
+
+    height:58px;
+
+    background:var(--primary);
+
+    border-radius:20px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:white;
+
+    font-size:26px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.title{
+
+    margin:0;
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+.subtitle{
+
+    font-size:13px;
+
+    color:var(--subtitle);
+
+}
+
+.status-online{
+
+    background:#EAF9EC;
+
+    color:var(--primary);
+
+    padding:10px 14px;
+
+    border-radius:999px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.status-online i{
+
+    margin-right:5px;
+
+}
+
+
+/* ==========================================================
+WELCOME
+========================================================== */
+
+.welcome{
+
+    margin-bottom:28px;
+
+}
+
+.welcome h2{
+
+    font-size:34px;
+
+    font-weight:700;
+
+    margin-bottom:6px;
+
+}
+
+.welcome p{
+
+    color:var(--subtitle);
+
+    line-height:1.6;
+
+}
+
+
+/* ==========================================================
+WEATHER CARD
+========================================================== */
+
+.weather-card{
+
+    background:
+    linear-gradient(
+        135deg,
+        #FFD54F,
+        #FFB74D
+    );
+
+    border-radius:28px;
+
+    padding:24px;
+
+    color:white;
+
+    box-shadow:var(--shadow);
+
+    overflow:hidden;
+
+    position:relative;
+
+    margin-bottom:24px;
+
+}
+
+.weather-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.weather-icon{
+
+    font-size:40px;
+
+}
+
+.weather-temp{
+
+    font-size:42px;
+
+    font-weight:700;
+
+}
+
+.weather-desc{
+
+    margin-top:4px;
+
+    opacity:.9;
+
+}
+
+.weather-info{
+
+    margin-top:26px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+}
+
+.weather-item{
+
+    text-align:center;
+
+}
+
+.weather-item span{
+
+    display:block;
+
+    font-size:12px;
+
+    opacity:.8;
+
+}
+
+.weather-item strong{
+
+    font-size:15px;
+
+}
+
+
+/* ==========================================================
+GRID SENSOR
+========================================================== */
+
+.sensor-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:18px;
+
+}
+
+
+/* ==========================================================
+CARD SENSOR
+========================================================== */
+
+.sensor-card{
+
+    background:white;
+
+    border-radius:24px;
+
+    padding:22px;
+
+    box-shadow:var(--shadow);
+
+    transition:.25s;
+
+}
+
+.sensor-card:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.sensor-icon{
+
+    width:54px;
+
+    height:54px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:white;
+
+    font-size:24px;
+
+    margin-bottom:18px;
+
+}
+
+.sensor-value{
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+.sensor-title{
+
+    color:var(--subtitle);
+
+    font-size:14px;
+
+}
+
+
+/* ==========================================================
+BOTTOM NAV
+========================================================== */
+
+.bottom-nav{
+
+    position:fixed;
+
+    bottom:20px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:min(390px,90%);
+
+    background:white;
+
+    border-radius:22px;
+
+    box-shadow:0 8px 35px rgba(0,0,0,.12);
+
+    display:flex;
+
+    justify-content:space-around;
+
+    padding:16px 0;
+
+}
+
+.bottom-item{
+
+    text-align:center;
+
+    color:#A3AAB2;
+
+    text-decoration:none;
+
+    font-size:13px;
+
+}
+
+.bottom-item i{
+
+    display:block;
+
+    font-size:22px;
+
+    margin-bottom:5px;
+
+}
+
+.bottom-item.active{
+
+    color:var(--primary);
+
+}
+
+
+/* ==========================================================
+RESPONSIVE
+========================================================== */
+
+@media(min-width:768px){
+
+.mobile-app{
+
+    max-width:500px;
+
+}
+
+}
