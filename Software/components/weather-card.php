@@ -21,6 +21,25 @@
     </div>
 
     <div class="weather-info">
+        <div class="mt-4 d-flex justify-content-between">
+
+    <small>
+
+        <i class="bi bi-droplet-fill"></i>
+
+        Water Tank Full
+
+    </small>
+
+    <small>
+
+        <i class="bi bi-cpu-fill"></i>
+
+        ESP32 Connected
+
+    </small>
+
+</div>
 
         <div class="weather-item">
 

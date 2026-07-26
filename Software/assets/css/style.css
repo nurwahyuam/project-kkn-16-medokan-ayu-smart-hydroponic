@@ -192,23 +192,23 @@ WEATHER CARD
     background:
     linear-gradient(
         135deg,
-        #FFD54F,
-        #FFB74D
+        #FDBA2D,
+        #FF8A34
     );
 
-    border-radius:28px;
+    border-radius:32px;
 
     padding:24px;
 
     color:white;
 
-    box-shadow:var(--shadow);
+    position:relative;
 
     overflow:hidden;
 
-    position:relative;
+    margin-bottom:28px;
 
-    margin-bottom:24px;
+    box-shadow:0 15px 40px rgba(255,166,0,.25);
 
 }
 
@@ -245,6 +245,7 @@ WEATHER CARD
 }
 
 .weather-info{
+    
 
     margin-top:26px;
 
@@ -252,7 +253,10 @@ WEATHER CARD
 
     justify-content:space-between;
 
+    
+
 }
+
 
 .weather-item{
 
@@ -275,6 +279,48 @@ WEATHER CARD
     font-size:15px;
 
 }
+
+.weather-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+
+    height:220px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.15);
+
+    right:-80px;
+
+    top:-80px;
+
+}
+
+.weather-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:120px;
+
+    height:120px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.12);
+
+    left:-40px;
+
+    bottom:-50px;
+
+}
+
+
 
 
 /* ==========================================================
@@ -312,17 +358,19 @@ CARD SENSOR
 
 .sensor-card:hover{
 
-    transform:translateY(-4px);
+    transform:
+
+    translateY(-8px);
 
 }
 
 .sensor-icon{
 
-    width:54px;
+    width:60px;
 
-    height:54px;
+    height:60px;
 
-    border-radius:18px;
+    border-radius:20px;
 
     display:flex;
 
@@ -332,15 +380,23 @@ CARD SENSOR
 
     color:white;
 
-    font-size:24px;
+    font-size:26px;
 
     margin-bottom:18px;
+
+    box-shadow:0 12px 25px rgba(0,0,0,.15);
+
+}
+
+.sensor-card{
+
+    position:relative;
 
 }
 
 .sensor-value{
 
-    font-size:28px;
+    font-size:34px;
 
     font-weight:700;
 
@@ -348,9 +404,9 @@ CARD SENSOR
 
 .sensor-title{
 
-    color:var(--subtitle);
+    color:#8E99A6;
 
-    font-size:14px;
+    margin-top:4px;
 
 }
 
@@ -383,6 +439,10 @@ BOTTOM NAV
 
     padding:16px 0;
 
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
 }
 
 .bottom-item{
@@ -410,6 +470,14 @@ BOTTOM NAV
 .bottom-item.active{
 
     color:var(--primary);
+
+    font-weight:600;
+
+}
+
+.bottom-item.active i{
+
+    transform:scale(1.1);
 
 }
 
