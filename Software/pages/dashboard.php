@@ -85,11 +85,6 @@
 <!-- BOTTOM NAVIGATION -->
 <?php include __DIR__ . "/../components/bottom-nav.php"; ?>
 
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/app.js"></script>
-
-</body>
-</html>
