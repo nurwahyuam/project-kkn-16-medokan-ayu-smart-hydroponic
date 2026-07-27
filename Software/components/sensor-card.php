@@ -26,6 +26,8 @@ function sensorCard($icon,$title,$value,$color){
 
     </div>
 
+    
+
 </div>
 
 <?php
