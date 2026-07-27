@@ -10,6 +10,13 @@
 
             <div class="weather-desc">
                 Sunny Day
+                <div class="mt-2">
+
+            <i class="bi bi-geo-alt-fill"></i>
+
+            Medokan Ayu
+
+            </div>
             </div>
 
         </div>

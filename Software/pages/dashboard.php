@@ -4,7 +4,6 @@
 <head>
 
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Smart Hydroponic Dashboard</title>
@@ -18,62 +17,30 @@
 <body>
 
 <div class="mobile-app">
+    
 
-    <?php include "components/header.php"; ?>
+    <!-- HEADER -->
+    <?php include __DIR__ . "/../components/header.php"; ?>
 
+    <!-- WELCOME -->
     <div class="welcome">
-
-        <h2>Good Morning 👋</h2>
-
-        <p>
-            Let's monitor today's hydroponic condition.
-        </p>
-
+        <h2>Hydroponic Dashboard</h2>
+        <p>Monitor your hydroponic farm in real time.</p>
     </div>
 
-    <?php include "components/weather-card.php"; ?>
+    <!-- WEATHER -->
+    <?php include __DIR__ . "/../components/weather-card.php"; ?>
 
-    <!-- QUICK STATUS -->
-    <div class="row mb-4">
+    <!-- QUICK ACTION -->
+    <?php include __DIR__ . "/../components/quick-actions.php"; ?>
 
-        <div class="col-6">
+    <!-- CHART -->
+    <?php include __DIR__ . "/../components/chart-card.php"; ?>
 
-            <div class="sensor-card text-center">
+    <!-- SENSOR CARD FUNCTION -->
+    <?php include __DIR__ . "/../components/sensor-card.php"; ?>
 
-                <i class="bi bi-fan"
-                    style="font-size:35px;color:#58C472;"></i>
-
-                <h5 class="mt-3 mb-1">Pump</h5>
-
-                <small class="text-success fw-semibold">
-                    Running
-                </small>
-
-            </div>
-
-        </div>
-
-        <div class="col-6">
-
-            <div class="sensor-card text-center">
-
-                <i class="bi bi-lightbulb-fill"
-                    style="font-size:35px;color:#FFD166;"></i>
-
-                <h5 class="mt-3 mb-1">Lamp</h5>
-
-                <small class="text-warning fw-semibold">
-                    Active
-                </small>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <?php include "components/sensor-card.php"; ?>
-
+    <!-- SENSOR GRID -->
     <div class="sensor-grid">
 
         <?php
@@ -110,13 +77,19 @@
 
     </div>
 
+    <!-- RECENT ACTIVITY -->
+    <?php include __DIR__ . "/../components/activity.php"; ?>
+
 </div>
 
-<?php include "components/bottom-nav.php"; ?>
+<!-- BOTTOM NAVIGATION -->
+<?php include __DIR__ . "/../components/bottom-nav.php"; ?>
 
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 <script src="assets/js/app.js"></script>
 
 </body>
-
 </html>
