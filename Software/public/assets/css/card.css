@@ -1,0 +1,225 @@
+/**
+ * Card Components
+ * ---------------
+ * Reusable "card" surface used by the Quick Action, Sensor, Chart and
+ * Recent Activity widgets. The 4 classes below originally repeated the
+ * exact same background/border-radius/box-shadow declaration 4 times;
+ * they are now grouped once and each card only declares what makes it
+ * different (padding, margin, height, hover). This is a pure dedup —
+ * computed styles for each class are identical to before.
+ */
+
+.action-card,
+.sensor-card,
+.chart-card,
+.activity-card {
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+}
+
+/* ---- Quick Action Card ---- */
+
+.action-card {
+    padding: 18px;
+    text-align: center;
+    transition: var(--transition-base);
+}
+
+.action-card:hover {
+    transform: translateY(-5px);
+}
+
+.action-icon,
+.sensor-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: var(--radius-sm);
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-white);
+}
+
+.action-icon {
+    font-size: 24px;
+    margin-bottom: 14px;
+}
+
+.pump { background: var(--color-primary); }
+.lamp { background: var(--color-lamp); }
+.wifi { background: var(--color-wifi); }
+
+.action-info h6 {
+    margin: 0;
+    font-size: 15px;
+}
+
+.action-info span {
+    color: var(--color-text-muted);
+    font-size: 12px;
+}
+
+/* ---- Chart Card ---- */
+
+.chart-card {
+    padding: 20px;
+    margin-bottom: var(--space-section);
+    height: 320px;
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.chart-header h6 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: var(--fw-semibold);
+    color: var(--color-text-muted);
+}
+
+.chart-scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.chart-wrapper {
+    width: 1200px;
+    height: 250px;
+}
+
+/* ---- Sensor Card ---- */
+
+.sensor-card {
+    padding: 20px;
+    text-align: center;
+}
+
+.sensor-icon i {
+    font-size: 24px;
+    line-height: 1;
+}
+
+.sensor-value {
+    font-size: 30px;
+    font-weight: var(--fw-bold);
+}
+
+.sensor-title {
+    color: var(--color-text-muted);
+    font-size: 13px;
+}
+
+/* ---- Recent Activity Card ---- */
+
+.activity-card {
+    padding: 22px;
+    margin-bottom: var(--space-section-lg);
+}
+
+.activity-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.activity-header h5 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: var(--fw-semibold);
+}
+
+.activity-header a {
+    font-size: 13px;
+    color: var(--color-primary);
+    font-weight: var(--fw-medium);
+}
+
+.activity-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--color-border-light);
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.activity-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-activity-icon);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-white);
+    flex-shrink: 0;
+}
+
+.activity-icon i {
+    font-size: 20px;
+}
+
+/*
+ * Type modifiers, reused by both the Quick Action icons (via .pump/.lamp/
+ * .wifi above) and the Activity icons (.success/.primary/.warning below).
+ * Kept as bare class names, unchanged from the original, so no markup
+ * needs to change. (Optional future improvement: namespace these as
+ * e.g. ".activity-icon--success" BEM-style — not applied here to avoid
+ * touching component markup without a specific request.)
+ */
+.success { background: var(--color-primary); }
+.primary { background: var(--color-activity-info); }
+.warning { background: var(--color-warning); }
+
+.activity-content {
+    flex: 1;
+}
+
+.activity-content h6 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: var(--fw-semibold);
+}
+
+.activity-content span {
+    display: block;
+    margin-top: 3px;
+    color: var(--color-text-faint);
+    font-size: 12px;
+}
+
+/* ---- Nutrient (TDS) Status Indicator ---- */
+
+.nutrient-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    padding: 14px 18px;
+    margin-bottom: var(--space-section);
+}
+
+.nutrient-status-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background: var(--color-text-muted); /* default until JS sets the real status color */
+}
+
+.nutrient-status-label {
+    font-size: 14px;
+    font-weight: var(--fw-medium);
+}

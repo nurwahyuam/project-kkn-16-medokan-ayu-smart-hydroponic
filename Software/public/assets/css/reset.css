@@ -1,0 +1,75 @@
+/**
+ * Reset / Base
+ * ------------
+ * Only SAFE, non-visual-breaking resets are included here. Aggressive
+ * resets (e.g. zeroing default <h2>/<p> margins) are intentionally
+ * OMITTED: the ".welcome" block in the dashboard has no custom CSS of
+ * its own and currently relies on the browser's default heading/paragraph
+ * spacing. Zeroing that out would visibly compress the welcome section,
+ * which would be a visual change with no functional reason — against
+ * project rules. If you'd like custom spacing for ".welcome" later, that
+ * can be added deliberately in dashboard.css.
+ */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+img,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+/**
+ * Bug fix (Step 1 finding): Poppins font files were bundled under
+ * assets/fonts/Poppins/*.ttf but no @font-face rule ever referenced
+ * them, and the old CSS's Google Fonts @import lived only in the
+ * unused "style old.css". The active stylesheet just wrote
+ * `font-family:Poppins,sans-serif`, silently falling back to the
+ * browser's default sans-serif. Only the weights actually used by
+ * the design (400/500/600/700) are declared, to keep payload small.
+ */
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins/Poppins-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}

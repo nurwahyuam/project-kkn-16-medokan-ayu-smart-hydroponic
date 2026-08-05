@@ -1,0 +1,9 @@
+/**
+ * Navbar (desktop variant)
+ * ------------------------
+ * Reserved for a future desktop top-navigation bar. The current
+ * dashboard is mobile-first and uses dashboard.css's ".header" as its
+ * top bar plus a fixed bottom-nav, so there is no separate "navbar"
+ * component in the original design. Intentionally empty — no visual
+ * change. See resources/views/layouts/navbar.php.
+ */
