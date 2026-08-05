@@ -1,0 +1,11 @@
+/**
+ * Utilities
+ * ---------
+ * The original design has no custom utility classes of its own — the
+ * weather-card component uses Bootstrap utilities directly in its
+ * markup (text-end, d-flex, justify-content-between, w-100, mt-1,
+ * mt-3, pt-3, border-top, border-light). Since Bootstrap is now
+ * correctly loaded (see Step 3's path-bug fix), those classes work as
+ * originally intended. This file is reserved for custom project-specific
+ * utility classes if/when needed — intentionally empty for now.
+ */

@@ -1,0 +1,14 @@
+/**
+ * Responsive
+ * ----------
+ * The original stylesheet has ZERO @media queries. The dashboard is a
+ * fixed-width mobile card (".mobile-app { max-width:430px }") that
+ * simply centers itself with empty space on either side on wider
+ * screens — there is no tablet/desktop-optimized layout.
+ *
+ * This file is intentionally left without new breakpoints for now:
+ * adding responsive behavior would change how the dashboard looks on
+ * tablet/desktop, which is a visual change beyond what was requested.
+ * If you'd like a true responsive layout (e.g. multi-column on desktop),
+ * let me know and I'll design it explicitly as its own step.
+ */

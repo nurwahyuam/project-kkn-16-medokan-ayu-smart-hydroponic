@@ -1,0 +1,29 @@
+/**
+ * Weather Widget
+ * --------------
+ * Styles for the external weather card shown at the top of the
+ * dashboard. Values unchanged from the original style.css.
+ */
+
+.weather-card {
+    background: linear-gradient(135deg, var(--color-warning), var(--color-warning-alt));
+    border-radius: var(--radius-xl);
+    padding: var(--mobile-app-padding);
+    color: var(--color-white);
+    margin-bottom: var(--space-section);
+    box-shadow: var(--shadow-weather);
+}
+
+.weather-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.weather-temp {
+    font-size: 48px;
+    font-weight: var(--fw-bold);
+}
+
+.weather-icon {
+    font-size: 42px;
+}

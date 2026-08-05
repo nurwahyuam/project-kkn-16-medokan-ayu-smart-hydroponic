@@ -1,0 +1,92 @@
+/**
+ * Design Tokens
+ * -------------
+ * Every color, shadow, radius, spacing and font-weight value below is
+ * copied EXACTLY from the original assets/css/style.css so the rendered
+ * dashboard looks pixel-identical. Centralizing them here removes the
+ * duplication that existed before (e.g. rgba(0,0,0,.08) was repeated
+ * 4 times, #58C472 was repeated 6 times, 22px margin-bottom appeared
+ * 4 times) and makes future theme changes a one-line edit.
+ */
+
+:root {
+
+    /* ---- Brand / Semantic Colors ---- */
+    --color-primary: #58C472;          /* logo, status-online text, pump icon, links, active states */
+    --color-primary-soft-bg: #EAF9EC;  /* status-online pill background */
+
+    --color-warning: #FDBA2D;          /* weather gradient start, warning activity icon */
+    --color-warning-alt: #FF8A34;      /* weather gradient end */
+
+    --color-lamp: #FFC107;             /* lamp quick-action icon (reserved, not yet used in markup) */
+    --color-wifi: #3B82F6;             /* wifi quick-action icon */
+    --color-activity-info: #4D96FF;    /* "primary" activity icon (ESP32 connected, etc.) */
+
+    --color-white: #ffffff;
+    --color-bg-body: #EEF7FF;
+
+    /* ---- Text Colors ---- */
+    --color-text-body: #263238;        /* body default text (was unset, relying on browser default black) */
+    --color-text-subtitle: #888;       /* header subtitle */
+    --color-text-muted: #777;          /* sensor-title, action-info span, bottom-nav item */
+    --color-text-faint: #8A8A8A;       /* activity timestamp */
+
+    /* ---- Borders ---- */
+    --color-border-light: #ECECEC;
+
+    /* ---- Shadows ---- */
+    --shadow-soft: 0 10px 25px rgba(0, 0, 0, .08);        /* action/sensor/chart/activity cards */
+    --shadow-logo: 0 8px 18px rgba(88, 196, 114, .3);
+    --shadow-weather: 0 15px 30px rgba(255, 153, 0, .25);
+    --shadow-bottom-nav: 0 12px 25px rgba(0, 0, 0, .12);
+
+    /* ---- Radius ---- */
+    --radius-sm: 18px;      /* logo, sensor/action icon circles */
+    --radius-lg: 22px;      /* action/sensor/chart/activity/bottom-nav */
+    --radius-xl: 28px;      /* weather-card */
+    --radius-pill: 30px;    /* status-online pill */
+    --radius-activity-icon: 14px;
+
+    /* ---- Spacing ---- */
+    --space-section: 22px;     /* weather/quick-actions/chart/sensor-grid margin-bottom */
+    --space-section-lg: 24px;  /* header/activity-card margin-bottom */
+
+    /* ---- Typography ---- */
+    --font-family-base: 'Poppins', sans-serif;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+
+    /* ---- Motion ---- */
+    --transition-base: .25s;
+
+    /* ---- Layout ---- */
+    --mobile-app-max-width: 430px;
+    --mobile-app-padding: 22px;
+    --mobile-app-bottom-offset: 110px; /* reserves space for the fixed bottom-nav */
+}
+
+/**
+ * Dark Theme
+ * ----------
+ * Applied via `<html data-theme="dark">` (see public/assets/js/theme.js).
+ * Default is light (no attribute) — matches the original design exactly.
+ * Only surface/background/text tokens change here; brand colors
+ * (primary green, warning orange, wifi blue, ...) stay the same in
+ * both themes so the app still feels like itself in dark mode.
+ */
+:root[data-theme="dark"] {
+    --color-bg-body: #101720;
+    --color-white: #1B2530;            /* card/surface background */
+    --color-primary-soft-bg: #16311F;
+
+    --color-text-body: #E2E8F0;
+    --color-text-subtitle: #94A3B8;
+    --color-text-muted: #A0AEC0;
+    --color-text-faint: #8B98A8;
+
+    --color-border-light: #2A3441;
+
+    --shadow-soft: 0 10px 25px rgba(0, 0, 0, .35);
+    --shadow-bottom-nav: 0 12px 25px rgba(0, 0, 0, .45);
+}

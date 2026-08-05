@@ -1,0 +1,72 @@
+/**
+ * Buttons
+ * -------
+ * Previously reserved/empty — now used by the Settings page's
+ * light/dark theme toggle switch.
+ */
+
+.theme-toggle-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    padding: 18px;
+    margin-bottom: var(--space-section);
+}
+
+.theme-toggle-row h6 {
+    margin: 0 0 4px;
+    font-size: 15px;
+    font-weight: var(--fw-semibold);
+}
+
+.theme-toggle-row span {
+    font-size: 12px;
+    color: var(--color-text-muted);
+}
+
+.theme-toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 52px;
+    height: 30px;
+    flex-shrink: 0;
+}
+
+.theme-toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.theme-toggle-track {
+    position: absolute;
+    inset: 0;
+    background: var(--color-border-light);
+    border-radius: var(--radius-pill);
+    cursor: pointer;
+    transition: var(--transition-base);
+}
+
+.theme-toggle-track::before {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 3px;
+    top: 3px;
+    background: var(--color-white);
+    border-radius: 50%;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition-base);
+}
+
+.theme-toggle-switch input:checked + .theme-toggle-track {
+    background: var(--color-primary);
+}
+
+.theme-toggle-switch input:checked + .theme-toggle-track::before {
+    transform: translateX(22px);
+}
