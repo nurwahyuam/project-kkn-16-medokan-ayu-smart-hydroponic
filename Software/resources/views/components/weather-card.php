@@ -20,11 +20,11 @@
 
     </div>
 
-    <div class="weather-info mt-3 pt-3 border-top border-light jborder-opacity-25">
+    <!-- <div class="weather-info mt-3 pt-3 border-top border-light jborder-opacity-25">
         <div class="d-flex justify-content-between w-100">
             <small>
                 <i class="bi bi-droplet-fill"></i>
-                <span data-i18n="weather_water_tank">Water Tank Full</span>
+                <span data-i18n="weather_water_tank">Water Hydroponic</span>
             </small>
 
             <small>
@@ -32,5 +32,5 @@
                 <span id="ext-weather-esp-status">ESP32 Connected</span>
             </small>
         </div>
-    </div>
+    </div> -->
 </div>
