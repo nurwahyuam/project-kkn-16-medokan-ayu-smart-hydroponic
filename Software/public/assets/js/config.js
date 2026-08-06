@@ -33,6 +33,7 @@ export const DOM_IDS = {
     activityList: "activity-list",
     nutrientStatusDot: "nutrient-status-dot",
     nutrientStatusLabel: "nutrient-status-label",
+    activityToggle: "activity-toggle",
 };
 
 export const COLORS = {

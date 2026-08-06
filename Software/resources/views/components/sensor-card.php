@@ -3,13 +3,14 @@
 /**
  * Renders a single sensor metric card.
  *
- * @param string $icon  Bootstrap Icons class, e.g. "bi bi-thermometer-high"
- * @param string $title Sensor label, e.g. "Nutrient Temp"
- * @param string $value Initial display value, e.g. "27°C"
- * @param string $color Icon background color (hex)
- * @param string $id    Optional element id so JS can update the value live
+ * @param string $icon    Bootstrap Icons class, e.g. "bi bi-thermometer-high"
+ * @param string $title   Sensor label, e.g. "Nutrient Temp"
+ * @param string $value   Initial display value, e.g. "27°C"
+ * @param string $color   Icon background color (hex)
+ * @param string $id      Optional element id so JS can update the value live
+ * @param string $i18nKey Optional i18n.js dictionary key for the title
  */
-function sensorCard($icon, $title, $value, $color, $id = "")
+function sensorCard($icon, $title, $value, $color, $id = "", $i18nKey = "")
 {
 ?>
 
@@ -29,7 +30,7 @@ function sensorCard($icon, $title, $value, $color, $id = "")
 
     </div>
 
-    <div class="sensor-title">
+    <div class="sensor-title" <?= $i18nKey ? 'data-i18n="' . $i18nKey . '"' : '' ?>>
 
         <?= $title ?>
 

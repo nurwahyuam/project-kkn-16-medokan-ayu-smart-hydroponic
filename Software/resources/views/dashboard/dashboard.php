@@ -24,6 +24,7 @@ $sensorMetrics = [
         'value' => '27°C',
         'color' => '#FF6B6B',
         'id'    => 'val-suhu',
+        'i18n'  => 'sensor_temp_title',
     ],
     [
         'icon'  => 'bi bi-lightning-charge-fill',
@@ -31,6 +32,7 @@ $sensorMetrics = [
         'value' => '850',
         'color' => '#FFD166',
         'id'    => 'val-tds',
+        'i18n'  => 'sensor_tds_title',
     ],
 ];
 
@@ -42,6 +44,7 @@ $quickActions = [
         'title' => 'Pump',
         'value' => 'Running',
         'id'    => 'val-pump',
+        'i18n'  => 'quick_action_pump',
     ],
     [
         'icon'  => 'bi bi-wifi',
@@ -49,6 +52,7 @@ $quickActions = [
         'title' => 'ESP32',
         'value' => 'Connected',
         'id'    => 'val-esp-status',
+        'i18n'  => 'quick_action_esp',
     ],
 ];
 
@@ -59,14 +63,14 @@ $quickActions = [
 
 <!-- WELCOME -->
 <div class="welcome">
-    <h2>Hydroponic Dashboard</h2>
-    <p>Monitor your hydroponic farm in real time.</p>
+    <h2 data-i18n="dashboard_title">Hydroponic Dashboard</h2>
+    <p data-i18n="dashboard_subtitle">Monitor your hydroponic farm in real time.</p>
 </div>
 
 <!-- LAST UPDATE -->
 <div class="last-update">
     <i class="bi bi-clock-history"></i>
-    Last update: <span id="val-last-update">--</span>
+    <span data-i18n="last_update">Last update</span>: <span id="val-last-update">--</span>
 </div>
 
 <!-- WEATHER -->
@@ -78,7 +82,7 @@ $quickActions = [
 <!-- SENSOR GRID -->
 <div class="sensor-grid">
     <?php foreach ($sensorMetrics as $metric): ?>
-        <?php sensorCard($metric['icon'], $metric['title'], $metric['value'], $metric['color'], $metric['id']); ?>
+        <?php sensorCard($metric['icon'], $metric['title'], $metric['value'], $metric['color'], $metric['id'], $metric['i18n']); ?>
     <?php endforeach; ?>
 </div>
 

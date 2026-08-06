@@ -28,8 +28,8 @@ $activityItems = [
 
 <!-- WELCOME -->
 <div class="welcome">
-    <h2>Riwayat Aktivitas</h2>
-    <p>Log pembacaan sensor & status pompa terbaru.</p>
+    <h2 data-i18n="history_title">Riwayat Aktivitas</h2>
+    <p data-i18n="history_subtitle">Log pembacaan sensor & status pompa terbaru.</p>
 </div>
 
 <!-- RECENT ACTIVITY -->
