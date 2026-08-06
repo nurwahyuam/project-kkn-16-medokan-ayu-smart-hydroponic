@@ -24,7 +24,7 @@
         <div class="d-flex justify-content-between w-100">
             <small>
                 <i class="bi bi-droplet-fill"></i>
-                Water Hydroponic
+                <span data-i18n="weather_water_tank">Water Tank Full</span>
             </small>
 
             <small>

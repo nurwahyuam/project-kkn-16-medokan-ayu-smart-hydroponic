@@ -39,8 +39,8 @@ function activityCard(array $items)
 <div class="activity-card">
 
     <div class="activity-header">
-        <h5>Recent Activity</h5>
-        <a href="#">View All</a>
+        <h5 data-i18n="activity_header">Recent Activity</h5>
+        <a href="#" id="activity-toggle" data-i18n="activity_view_all">View All</a>
     </div>
 
     <div id="activity-list">

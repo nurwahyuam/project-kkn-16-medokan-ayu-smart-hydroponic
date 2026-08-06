@@ -14,7 +14,7 @@ $activeNav = $activeNav ?? 'home';
 
         <i class="bi bi-house-fill"></i>
 
-        Home
+        <span data-i18n="nav_home">Beranda</span>
 
     </a>
 
@@ -22,7 +22,7 @@ $activeNav = $activeNav ?? 'home';
 
         <i class="bi bi-clock-history"></i>
 
-        Activity
+        <span data-i18n="nav_history">Aktivitas</span>
 
     </a>
 
@@ -30,7 +30,7 @@ $activeNav = $activeNav ?? 'home';
 
         <i class="bi bi-cpu-fill"></i>
 
-        Grafik
+        <span data-i18n="nav_device">Grafik</span>
 
     </a>
 
@@ -38,7 +38,7 @@ $activeNav = $activeNav ?? 'home';
 
         <i class="bi bi-gear-fill"></i>
 
-        Setting
+        <span data-i18n="nav_settings">Pengaturan</span>
 
     </a>
 
