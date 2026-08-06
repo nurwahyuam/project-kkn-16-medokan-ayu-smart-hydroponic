@@ -28,7 +28,7 @@ $activeNav = $activeNav ?? 'home';
 
     <a href="/device" class="bottom-item <?= $activeNav === 'device' ? 'active' : '' ?>">
 
-        <i class="bi bi-cpu-fill"></i>
+        <i class="bi bi-graph-up"></i>
 
         <span data-i18n="nav_device">Grafik</span>
 
